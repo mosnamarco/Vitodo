@@ -1,0 +1,89 @@
+#root {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    gap: 10px;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    padding: 3em;
+}
+
+.logo-container {
+    height: fit-content;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: see-saw 1s ease-in-out infinite alternate;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+}
+.input-container > button {
+    border-radius: 0px 10px 10px 0px;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0px;
+}
+.task-container {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    animation: fade-in 0.5s ease-in-out;
+}
+.fade-out {
+    animation: fade-out 0.5s ease-in-out;
+}
+
+@keyframes see-saw {
+    from {
+        transform: rotate(15deg);
+        scale: 1.2;
+    }
+    to {
+        transform: rotate(-15deg);
+        scale: 1;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+        animation: logo-spin infinite 20s linear;
+    }
+}
+
+.card {
+    padding: 2em;
+}
+
+.read-the-docs {
+    color: #888;
+}
